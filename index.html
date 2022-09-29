@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Juegos con JQuery</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/funciones.js"></script><script type="js/jquery.js"></script>
+
+    <!-- Efecto Clasificable -->
+    <style>
+	  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+	  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+	  #sortable li span { position: absolute; margin-left: -1.3em; }
+  	</style>
+
+  	<!-- Efecto Clasificable -->
+	<script>
+	  $( function() {
+	    $( "#sortable" ).sortable();
+	  } );
+	</script>
+
+  	<!-- Efecto Droppable -->
+  	<style>
+	  #draggable  { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable  { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	  #draggable1 { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable1 { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	  #draggable2 { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable2 { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	  #draggable3 { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable3 { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	  #draggable4 { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable4 { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	  #draggable5 { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable5 { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	  #draggable6 { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable6 { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	  #draggable7 { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable7 { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	  #draggable8 { width: 130px; height: 130px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	  #droppable8 { width: 180px; height: 180px; padding: 0.5em; float: left; margin: 10px; }
+	</style>
+  
+	<!-- Efecto Droppable -->
+	<script>
+	  $( function() {
+	    $( "#draggable" ).draggable();
+	    $( "#droppable" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " Elon Musk " );
+	      }
+	    });
+	  } );
+	 </script>
+
+	 <script>
+	  $( function() {
+	    $( "#draggable1" ).draggable();
+	    $( "#droppable1" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " Steve Jobs " );
+	      }
+	    });
+	  } );
+	 </script>
+
+	 <script>
+	  $( function() {
+	    $( "#draggable2" ).draggable();
+	    $( "#droppable2" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " Michael Jackson " );
+	      }
+	    });
+	  } );
+	 </script>
+
+	 <script>
+	  $( function() {
+	    $( "#draggable3" ).draggable();
+	    $( "#droppable3" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " William Shakespeare " );
+	      }
+	    });
+	  } );
+	 </script>
+
+	 <script>
+	  $( function() {
+	    $( "#draggable4" ).draggable();
+	    $( "#droppable4" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " Nikola Tesla " );
+	      }
+	    });
+	  } );
+	 </script>
+
+	 <script>
+	  $( function() {
+	    $( "#draggable5" ).draggable();
+	    $( "#droppable5" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " Científico Alemán" );
+	      }
+	    });
+	  } );
+	 </script>
+
+	 <script>
+	  $( function() {
+	    $( "#draggable6" ).draggable();
+	    $( "#droppable6" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " Mark Zuckerberg " );
+	      }
+	    });
+	  } );
+	 </script>
+
+	 <script>
+	  $( function() {
+	    $( "#draggable7" ).draggable();
+	    $( "#droppable7" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " Aristóteles" );
+	      }
+	    });
+	  } );
+	 </script>
+
+	 <script>
+	  $( function() {
+	    $( "#draggable8" ).draggable();
+	    $( "#droppable8" ).droppable({
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	          .find( "p" )
+	            .html( " Adolfo Hitler " );
+	      }
+	    });
+	  } );
+	 </script>
+
+
+	<!-- PESTAÑAS -->
+	 	<script>
+		  $( function() {
+		    $( "#tabs" ).tabs();
+		  } );
+  		</script>
+
+  	<!-- DIALOGO -->
+  	<script>
+  		$( function() {
+    		$( "#dialog" ).dialog();
+  		} );
+  	</script>
+
+  	<!-- ALTERNAR -->
+  	<style>
+		  .toggler {
+		    width: 500px;
+		    height: 400px;
+		  }
+		  #button {
+		    padding: .5em 1em;
+		    text-decoration: none;
+		  }
+		  #effect {
+		    position: relative;
+		    width: 240px;
+		    height: 400px;
+		    padding: 0.4em;
+		  }
+		  #effect h3 {
+		    margin: 0;
+		    padding: 0.4em;
+		    text-align: center;
+		  }
+  	</style>
+
+  	<script>
+	  	$( function() {
+	    // run the currently selected effect
+	    function runEffect() {
+	      // get effect type from
+	      var selectedEffect = $( "#effectTypes" ).val();
+	 
+	      // Most effect types need no options passed by default
+	      var options = {};
+	      // some effects have required parameters
+	      if ( selectedEffect === "scale" ) {
+	        options = { percent: 50 };
+	      } else if ( selectedEffect === "size" ) {
+	        options = { to: { width: 200, height: 60 } };
+	      }
+	 
+	      // Run the effect
+	      $( "#effect" ).toggle( selectedEffect, options, 500 );
+	    };
+	 
+	    // Set effect from select menu value
+	    $( "#button" ).on( "click", function() {
+	      runEffect();
+	    });
+	  } );
+  	</script>
+
+
+</head>
+<body>
+	<div class="container"  align="center" id="divc">
+		<br><h5>JUEGOS CON JQUERY</h5>
+	</div>
+	<div id="tabs">
+	  <ul>
+	    <li><a href="#tabs-1">Linea de tiempo</a></li>
+	    <li><a href="#tabs-2">Juego de selección</a></li>
+	  </ul>
+	  	<div id="tabs-1">
+	    	<div align="center"><p><b>EN ESTE APARTADO DEBE ORGANIZAR LOS HECHOS HISTORICOS DEL MÁS ANTIGUO AL MÁS RECIENTE</b></p></div>
+			    <div class="container" align="center" id="divc1">
+					<!-- Efecto Clasificable -->
+					<br>
+						<ul id="sortable">
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>INICIO DE LA PRIMERA GUERRA MUNDIAL</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>HUNDIMIENTO DEL TITANIC</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>SE PUBLICA LA TEORIA DE LA RELATIVIDAD</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>CONSTRUCCIÓN DE LA TORRE EIFFEL</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>LA REVOLUCIÓN FRANCESA</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>FIN DE LA PRIMERA GUERRA MUNDIAL</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>SE LANZAN LAS BOMBAS DE HIROSHIMA Y NAGASAKI</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>EDISON INVENTA LA BOMBILLA ELÉCTRICA</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>ATAQUE A LAS TORRES GEMELAS</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>PRIMER BARCO A VAPOR</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>GANDHI ES ASESINADO</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>CONSTRUCCIÓN DEL MURO DE BERLÍN</li>
+						  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>IBM LANZA LA PRIMERA COMPUTADORA</li>
+						</ul>
+						<br><br>
+						<button id="button" class="ui-state-default ui-corner-all">Mostrar/Ocultar solución</button><br><br>
+						<div class="toggler">
+							<div id="effect" class="ui-widget-content ui-corner-all" >
+							    <h3 class="ui-widget-header ui-corner-all">Solución</h3>
+							    <p>
+							      1. Revolcuión francesa <br>
+							      2. Primer Barco a Vapor <br>
+							      3. Edison inventa la bombilla eléctrica<br>
+							      4. Construcción de la torre Eiffel<br>
+							      5. Se publica la teoría de la relatividad<br>
+							      6. Hundimiento del Titanic<br>
+							      7. Inicia primera guerra mundial<br>
+							      8. Fin de la primera guerra mundial.<br>
+							      9. Se lanzan las bombas de Hiroshima y Nagasaki <br>
+							      10. Gandhi es asesinado<br>
+							      11. Construcción del muro de Berlín<br>
+							      12. IBM lanza la primera computadora<br>
+							      13. Ataque a las torres gemelas<br>
+							    </p>
+							</div>
+						</div><br>
+				</div>
+		</div>
+		  <div id="tabs-2">
+		  	<p align="center"><b>EN ESTE APARTADO DEBE INGRESAR LA FOTOGRAFÍA EN LA CASILLA CORRESPONDIENTE</b></p>
+		  		<div align="center" id=tabs-21>
+
+					<!-- Efecto Droppable -->
+					<div id="draggable" class="ui-widget-content">
+						  <img width="130" height="130" src="https://th.bing.com/th/id/OIP.ORi150_exy8Ekl7QFHYYswHaJw?w=128&h=180&c=7&r=0&o=5&pid=1.7">
+					</div>
+					<div id="droppable" class="ui-widget-header">
+						  <p>Fundador de SpaceX</p>
+					</div>
+					<div id="draggable1" class="ui-widget-content">
+						  
+						  <img width="130" height="130" src="https://th.bing.com/th/id/OIP.FYXemXM0Ugdx8l48nza7JQHaFF?w=263&h=181&c=7&r=0&o=5&pid=1.7">
+					</div>
+					<div id="droppable1" class="ui-widget-header">
+						  <p>Creador del Iphone</p>
+					</div>
+
+					<div id="draggable2" class="ui-widget-content">
+						  <img width="130" height="130" src="https://th.bing.com/th/id/OIP.pvIahOtO6F86sYGOP_OBVQHaHy?w=167&h=180&c=7&r=0&o=5&pid=1.7">
+					</div>
+					<div id="droppable2" class="ui-widget-header">
+						  <p>Apodado como el Rey del Pop</p>
+					</div>
+
+					<div id="draggable3" class="ui-widget-content">
+						  <img width="130" height="130" src="https://th.bing.com/th/id/OIP.Mn-mmZxTc32y3EDeT4GWJAHaHa?w=171&h=180&c=7&r=0&o=5&pid=1.7">
+					</div>
+					<div id="droppable3" class="ui-widget-header">
+						  <p>Escritor británico</p>
+					</div>
+
+					<div id="draggable4" class="ui-widget-content">
+						  <img width="130" height="130" src="https://th.bing.com/th/id/OIP.yn2bECxY9htzTD9S0buv1wHaJ7?w=195&h=262&c=7&r=0&o=5&pid=1.7">
+					</div>
+					<div id="droppable4" class="ui-widget-header">
+						  <p>Conocido como el padre de la electricidad moderna</p>
+					</div>
+
+					<div id="draggable5" class="ui-widget-content">
+						  <img width="130" height="130" src="https://th.bing.com/th/id/OIP.64uBBOnb7wTOnrjgyYkq9gHaHa?w=159&h=180&c=7&r=0&o=5&pid=1.7">
+					</div>
+					<div id="droppable5" class="ui-widget-header">
+						  <p>Científico Alemán</p>
+					</div>
+
+					<div id="draggable6" class="ui-widget-content">
+						  <img width="130" height="130" src="https://th.bing.com/th/id/OIP.gIGKuw6-qxqeMfdAQ-URVAHaHa?w=191&h=192&c=7&r=0&o=5&pid=1.7">
+					</div>
+					<div id="droppable6" class="ui-widget-header">
+						  <p>Creador de Facebook</p>
+					</div>
+
+
+					<div id="draggable7" class="ui-widget-content">
+						  <img width="130" height="130" src="https://th.bing.com/th/id/R.60bb99056e5c6749daec1fb5809afb0c?rik=FGVeSn4BOcSB7A&riu=http%3a%2f%2f4.bp.blogspot.com%2f-x77UqLDlYBk%2fTgmFtPzKA6I%2fAAAAAAAAAp0%2f1Y1HlRO1lU8%2fs1600%2fAlbert_Einstein.jpg&ehk=t5YF0Ta%2bPDZ5GbqMJzk57NreEDAgCQD3ApIiyWRNzoQ%3d&risl=&pid=ImgRaw&r=0">
+					</div>
+					<div id="droppable7" class="ui-widget-header">
+						  <p>Considerado el padre de la filosofía</p>
+					</div>
+
+					<div id="draggable8" class="ui-widget-content">
+						  <img width="130" height="130" src="https://th.bing.com/th/id/OIP.RuZGXh7_WyO4Cb2fsN8bQwHaE8?w=260&h=180&c=7&r=0&o=5&pid=1.7">
+					</div>
+					<div id="droppable8" class="ui-widget-header">
+						  <p>Dictador Alemán</p>
+					</div>
+				</div>
+		  </div>
+	</div>
+
+
+
+	<div id="dialog" title="Acerca de...">
+  		<p><b>Ejercicio desarrollado por:<br><br>
+  			Jhohan Orlando Cabrera Chunata <br>
+  			Cod: 218036018 <br>
+  			Universidad de Nariño <br>
+  			<img align="center" width="270" height="200" src="https://th.bing.com/th/id/R.80913b42acc4c8ad58e4b9794acc4d7e?rik=FlpXPU%2fNhR0kIw&riu=http%3a%2f%2fwww.udenar.edu.co%2frecursos%2fwp-content%2fuploads%2f2018%2f02%2flogo-universidad-de-narino-udenar-periodico.jpg&ehk=3HxkC9IXr86HSB0wlKmqeE%2f6TsfD9igcXoLABVH0lNY%3d&risl=&pid=ImgRaw&r=0"></p>
+	</div>
+
+</body>
+</html>
+
